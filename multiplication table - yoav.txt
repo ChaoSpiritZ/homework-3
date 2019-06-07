@@ -1,0 +1,26 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		Console.WriteLine("Multiplication chart: ");
+		int row = 1;
+		int column = 1;
+		while(row <= 10)
+		{
+			column = 1;
+			while(column <= 10)
+			{
+				if (column > 1)
+				{
+					Console.Write(" | ");
+				}
+				Console.Write((row * column));
+				column++;
+			}
+			Console.WriteLine();
+			row++;
+		}
+	}
+}

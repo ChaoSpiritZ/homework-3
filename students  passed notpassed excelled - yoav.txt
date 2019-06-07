@@ -1,0 +1,33 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int passed = 0;
+		int notpassed = 0;
+		int excel = 0;
+		Console.WriteLine("Enter the number of students in class: ");
+		int[] students = new int[int.Parse(Console.ReadLine())];
+		for(int i = 0;i < students.Length;i++)
+		{
+			Console.Write("Grade of student number {0}:", i + 1);
+			students[i] = int.Parse(Console.ReadLine());
+			if(students[i] >= 60)
+			{
+				passed++;
+			}
+			else
+			{
+				notpassed++;
+			}
+			if (students[i] >= 95)
+			{
+				excel++;
+			}
+		}
+		Console.WriteLine("{0} students have passed", passed);
+		Console.WriteLine("{0} students haven't passed", notpassed);
+		Console.WriteLine("{0} students have excelled", excel);
+	}
+}

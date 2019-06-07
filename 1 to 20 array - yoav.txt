@@ -1,0 +1,32 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int[] array = new int[20];
+		for(int i = 0; i < 20; i++)
+		{
+			array[i] = 0;
+		}
+		Console.WriteLine("Enter numbers from 1 to 20, enter 0 to stop:");
+		int num = int.Parse(Console.ReadLine());
+		while(num != 0)
+		{
+			if(num <= 20 && num >= 1)
+			{
+			array[num - 1] += 1;
+			num = int.Parse(Console.ReadLine());
+			}
+			else
+			{
+				Console.WriteLine("The number is not between 1 and 20");
+				num = int.Parse(Console.ReadLine());
+			}
+		}
+		for(int i = 0; i < 20; i++)
+		{
+			Console.WriteLine("{0} was entered {1} times", i + 1, array[i]);
+		}
+	}
+}
